@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Googleアナリティクス -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Form Guid / Coding Rule from CS-reporters</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <!-- OGP / 基本共通設定 -->
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <title>TITLE</title>
+  <meta property="og:title" content="ページのタイトル" />
+  <meta property="og:type" content="ページの種類" />
+  <meta property="og:url" content="ページのURL" />
+  <meta property="og:image" content="サムネイル画像の URL" />
+  <meta property="og:site_name" content="サイト名" />
+  <meta property="og:description" content="ページのディスクリプション" />
+
+  <!-- OGP / Facebook用設定 -->
+  <meta property="fb:app_id" content="App-ID（15文字の半角数字）" />
+
+  <!-- OGP / Twitter共通設定 -->
+  <meta name="twitter:card" content="Twitterカードの種類" />
+  <meta name="twitter:site" content="@[TwitterID]" />
+  <meta name="twitter:player" content="@[TwitterID]" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" media="all" href="css/import.css" />
+
+  <!-- JavaScript -->
+  <!-- header付近に書かないと動かないjs以外に関しては全て「/body」の直前に記述する -->
+</head>
+<body>
+
+  <header>
+    <nav class="mgb_20">
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="setup.html">Set up</a>
+        </li>
+        <li>
+          <a href="grid.html">Grid</a>
+        </li>
+        <li>
+          <a href="typo.html">Typography</a>
+        </li>
+        <li>
+          <a href="media.html">Media</a>
+        </li>
+        <li>
+          <a href="form.html">Form</a>
+        </li>
+      </ul>
+    </nav>
+    <h1>
+      <span>Form Guid</span>
+      <span>updated 12 / 22 / 2017</span>
+    </h1>
+  </header>
+
+  <main>
+    <div class="wrapper">
+      <div class="inner_txt mgb_30">
+        <h3>サーバーに送信する項目がある場合は、それらを&lt;form method="POST"&gt;で括る</h3>
+        <p>&lt;form&gt;で括らないと、サーバ側に送信されません。method属性がPOSTでないと入力項目がURLのクエリストリングに入れられ、入力内容によってはURLが長大になる可能性があります</p>
+      </div>
+
+      <div class="inner_txt mgb_30">
+        <h3>ファイルのアップロードをする項目がある場合は以下の設定にする</h3>
+        <p>&lt;input type="file"&gt;がある場合、&lt;form&gt;タグは&lt;form enctype="multipart/form-data" method="POST"&gt;にし、その直下に&lt;input type="hidden" name="MAX_FILE_SIZE" value="30000" /&gt;を記述してください</p>
+        <p>PHPでファイルアップロードを受け付ける場合、左記の記述にしないとなりません</p>
+        <p>参考サイト：<a href="http://php.net/manual/ja/features.file-upload.post-method.php" target="?_blank">http://php.net/manual/ja/features.file-upload.post-method.php</a></p>
+      </div>
+
+      <div class="inner_txt mgb_30">
+        <h3>&lt;input type="submit"&gt;は&lt;button&gt;にする</h3>
+        <p>&lt;input type="submit"&gt;のvalue属性はボタンに表示する文字に当たりますが、value属性はPHPに渡される値にもなります<br>value属性を変えたい時、&lt;input type="submit"&gt;だと表示する文字を変えてしまう事になります<br>&lt;button&gt;ですと、value属性は表示する文字とは無関係な為、自由に設定できます</p>
+      </div>
+
+      <div class="inner_txt mgb_30">
+        <h3>&lt;input&gt;は空文字でも良いのでname属性とvalue属性を設定する</h3>
+        <p>PHPで入力項目を処理するには、name属性とvalue属性がないと処理できないためです。</p>
+      </div>
+
+      <div class="inner_txt mgb_30">
+        <h3>&lt;select&gt;や&lt;textarea&gt;は空文字でも良いのでname属性を設定する</h3>
+        <p>同上</p>
+      </div>
+
+      <div class="inner_txt mgb_30">
+        <h3>入力画面には、エラー文を表示する箇所を用意する</h3>
+        <p>入力項目にエラーがあった場合、そのエラーをHTML側に表示する必要があるためです</p>
+      </div>
+
+      <div class="inner_txt mgb_30">
+        <h3>都道府県や性別等、&lt;select&gt;や&lt;input type="radio"&gt;にできる所は必ず設定する</h3>
+        <p>送信データを集計する場合、テキスト入力だと入力項目にぶれがある為集計に時間がかかりるためです。</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrapper">
+      <p class="copyright">
+        ©CS-Reporters
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/example1.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+@import url("reset.css");
+@import url("base.css");
+@import url("style.css");
+
+/* media query view change */
+/*@import url("style.css") screen and (min-width: ***px);*/
+/*@import url("style.css") screen and (min-width: ***px) and (max-width: ***px);*/
+/*@import url("style.css") screen and (max-width: ***px);*/

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <!-- Googleアナリティクス -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Typography Rule / Coding Rule from CS-reporters</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <!-- OGP / 基本共通設定 -->
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+  <title>TITLE</title>
+  <meta property="og:title" content="ページのタイトル" />
+  <meta property="og:type" content="ページの種類" />
+  <meta property="og:url" content="ページのURL" />
+  <meta property="og:image" content="サムネイル画像の URL" />
+  <meta property="og:site_name" content="サイト名" />
+  <meta property="og:description" content="ページのディスクリプション" />
+
+  <!-- OGP / Facebook用設定 -->
+  <meta property="fb:app_id" content="App-ID（15文字の半角数字）" />
+
+  <!-- OGP / Twitter共通設定 -->
+  <meta name="twitter:card" content="Twitterカードの種類" />
+  <meta name="twitter:site" content="@[TwitterID]" />
+  <meta name="twitter:player" content="@[TwitterID]" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" media="all" href="css/import.css" />
+
+  <!-- JavaScript -->
+  <!-- header付近に書かないと動かないjs以外に関しては全て「/body」の直前に記述する -->
+</head>
+<body>
+
+  <header>
+    <nav class="mgb_20">
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="setup.html">Set up</a>
+        </li>
+        <li>
+          <a href="grid.html">Grid</a>
+        </li>
+        <li>
+          <a href="typo.html">Typography</a>
+        </li>
+        <li>
+          <a href="media.html">Media</a>
+        </li>
+        <li>
+          <a href="form.html">Form</a>
+        </li>
+      </ul>
+    </nav>
+    <h1>
+      <span>Typography Rule</span>
+      <span>updated 12 / 22 / 2017</span>
+    </h1>
+  </header>
+
+  <main>
+    <div class="wrapper">
+      <div class="inner_txt mgb_30">
+        <h3>h1~6、pタグ等全ての文字は初期サイズ62.5%(10px)が設定</h3>
+        <p>reset.cssの設定でページのフォントは初期サイズ10pxに設定しています。フォントサイズを変更する場合は、新たに制作するCSSファイルにフォントサイズを入れて調整して下さい。</p>
+      </div>
+
+      <div class="inner_txt mgb_30">
+        <h3>フォントの単位は「rem」を原則使用する</h3>
+        <p>フォントのサイズを決める単位「rem」で統一して下さい。</p>
+      </div>
+
+      <div class="inner_txt mgb_30">
+        <h3>a要素のフォントサイズなどをリセットしフォントの縦方向の揃え位置を親要素のベースラインに揃えている</h3>
+        <p>揃え位置を変更したい場合は、新たに作るCSSで設定しなおして下さい。</p>
+      </div>
+
+      <div class="inner_txt mgb_30">
+        <h3>aタグのボーダーラインは非表示にしてある</h3>
+        <p>標準で表示されるaタグのボーダーラインは非表示にしてあります。</p>
+      </div>
+
+      <div class="inner_txt mgb_30">
+        <h3>ul,olのlist-typeも非表示にしてある</h3>
+        <p>ul使用時</p>
+        <ul>
+          <li>テキスト</li>
+          <li>テキスト</li>
+          <li>テキスト</li>
+          <li>テキスト</li>
+          <li>テキスト</li>
+        </ul>
+        <p>ol使用時</p>
+        <ol>
+          <li>テキスト</li>
+          <li>テキスト</li>
+          <li>テキスト</li>
+          <li>テキスト</li>
+          <li>テキスト</li>
+        </ol>
+      </div>
+
+      <div class="inner_txt mgb_30">
+        <h3></h3>
+        <p></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrapper">
+      <p class="copyright">
+        ©CS-Reporters
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/example1.js"></script>
+
+</body>
+</html>
