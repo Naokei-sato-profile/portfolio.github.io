@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+body.top {
+  background-image: url(../img/bg-header.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+body.top header {
+  background: none;
+}
+
+
+h3, p {
+  font-size: 1.4rem;
+  line-height: 160%;
+}
+
+p {
+  color: #777;
+}
+
+nav ul {
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-justify-content: flex-end; /* Safari */
+  justify-content:         flex-end;
+  padding: 20px;
+  margin: 0 auto;
+}
+nav ul li {
+  padding: 0 10px;
+}
+nav ul li a {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+/* top page */
+body.top main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+body.top main h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-65%);
+  -moz-transform: translate(-50%,-65%);
+  -ms-transform: translate(-50%,-65%);
+  -o-transform: translate(-50%,-65%);
+  transform: translate(-50%,-65%);
+}
+
+body.top main h1 img {
+  width: 400px;
+}
+
+
+.wrapper{
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  height: 500px;
+  background-image: url(../img/bg-header.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  -webkit-flex-direction: column; /* Safari */
+  flex-direction:         column;
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+}
+
+header h1 span {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000;
+}
+
+header h1 span:last-child {
+  font-size: 1rem;
+}
+
+header h1 figure {
+  width: 300px;
+  margin-bottom: 30px;
+}
+
+main .wrapper{
+  position: relative;
+  margin-top: -100px;
+  padding: 60px;
+  background: #fff;
+}
+
+h1.top_logo {
+
+}
+
+
+.img_box {
+  display: flex;
+}
+.inner_txt h3,
+.inner_img h3 {
+  font-size: 20px;
+  border-left: 3px solid #00BCD4;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+.inner_txt p,
+.inner_img p {
+  padding: 10px;
+}
+
+.harf {
+  width: 50%;
+  padding: 10px;
+}
+
+figcaption {
+  padding: 10px;
+  font-size: 1.4rem;
+}
+footer {
+  background: #333;
+  padding: 30px 0;
+}
+.copyright {
+  text-align: center;
+  color: #fff;
+}
